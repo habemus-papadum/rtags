@@ -50,7 +50,7 @@ else()
 endif()
 
 # Create uninstall script and target
-configure_file("${CMAKE_MODULE_PATH}/Uninstall.cmake.in" "${CMAKE_BINARY_DIR}/Uninstall.cmake" IMMEDIATE @ONLY)
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/Uninstall.cmake.in" "${CMAKE_BINARY_DIR}/Uninstall.cmake" IMMEDIATE @ONLY)
 add_custom_target(uninstall ${CMAKE_COMMAND} -P "${CMAKE_BINARY_DIR}/Uninstall.cmake")
 
 if (RTAGS_ENABLE_DEV_OPTIONS)
